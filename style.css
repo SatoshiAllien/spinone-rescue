@@ -487,6 +487,9 @@ body.has-fb-bar .nav__menu {
 
 /* Nav Facebook link */
 .nav__fb-link {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.4rem;
   padding: 0.45rem 1rem !important;
   background: #1877f2 !important;
   color: var(--color-white) !important;
@@ -494,9 +497,36 @@ body.has-fb-bar .nav__menu {
   animation: fbPulse 2.5s ease-in-out infinite;
 }
 
+.nav__fb-link::after {
+  display: none !important;
+}
+
 .nav__fb-link:hover {
   color: var(--color-white) !important;
   background: #1464d0 !important;
+}
+
+/* Header Facebook icon (always visible next to EN/IT) */
+.nav__fb-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: #1877f2;
+  color: var(--color-white);
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(24, 119, 242, 0.4);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+  animation: fbPulse 2.5s ease-in-out infinite;
+}
+
+.nav__fb-icon:hover {
+  color: var(--color-white);
+  background: #1464d0;
+  transform: scale(1.08);
+  box-shadow: 0 4px 18px rgba(24, 119, 242, 0.55);
 }
 
 /* Header & Navigation */
@@ -1417,6 +1447,10 @@ body.has-fb-bar .nav__menu {
     font-size: 0.68rem;
   }
 
+  .nav__fb {
+    display: none;
+  }
+
   .nav__toggle {
     display: flex;
   }
@@ -1499,7 +1533,8 @@ body.has-fb-bar .nav__menu {
   .floating-bg__dog,
   .btn--pulse,
   .fb-float,
-  .nav__fb-link {
+  .nav__fb-link,
+  .nav__fb-icon {
     animation: none !important;
   }
 

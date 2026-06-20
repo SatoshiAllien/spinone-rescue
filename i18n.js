@@ -291,7 +291,17 @@
     if (metaDesc) metaDesc.setAttribute('content', t('meta.description'));
 
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
-      el.textContent = t(el.getAttribute('data-i18n'));
+      var key = el.getAttribute('data-i18n');
+      var value = t(key);
+      /* Preserve SVG/img icons inside parent buttons */
+      if (el.querySelector('svg, img')) {
+        var label = el.querySelector('[data-i18n-label]') || el.querySelector('span:not(.fb-float__pulse)');
+        if (label) {
+          label.textContent = value;
+          return;
+        }
+      }
+      el.textContent = value;
     });
 
     document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
