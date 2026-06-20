@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Spinone Italiano Rescue">
+  <defs>
+    <clipPath id="circleClip">
+      <circle cx="200" cy="200" r="188"/>
+    </clipPath>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f6f2"/>
+      <stop offset="100%" stop-color="#e8e4dc"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#3d3529" flood-opacity="0.18"/>
+    </filter>
+    <path id="textTopLeft" d="M 58 168 A 142 142 0 0 1 198 52" fill="none"/>
+    <path id="textTopRight" d="M 202 52 A 142 142 0 0 1 342 168" fill="none"/>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="200" cy="200" r="196" fill="url(#ringGrad)" stroke="#d4cfc4" stroke-width="2"/>
+  <circle cx="200" cy="200" r="188" fill="#ffffff" filter="url(#softShadow)"/>
+
+  <!-- Italian flag background -->
+  <g clip-path="url(#circleClip)">
+    <rect x="12" y="12" width="188" height="376" fill="#009246"/>
+    <rect x="200" y="12" width="188" height="376" fill="#ce2b37"/>
+    <rect x="188" y="12" width="24" height="376" fill="#ffffff" opacity="0.92"/>
+  </g>
+
+  <!-- Ground line -->
+  <line x1="72" y1="292" x2="328" y2="292" stroke="#2d2926" stroke-width="2.5" stroke-linecap="round" opacity="0.35"/>
+
+  <!-- Dogs group -->
+  <g fill="#ffffff" stroke="#2d2926" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+
+    <!-- Left dog (sitting, smaller) -->
+    <g transform="translate(88, 198)">
+      <ellipse cx="34" cy="78" rx="30" ry="22" fill="#ffffff"/>
+      <path d="M 18 58 Q 8 42 14 24 Q 20 10 34 8 Q 48 10 54 24 Q 60 42 50 58" fill="#ffffff"/>
+      <path d="M 14 24 Q 6 34 8 52" fill="none"/>
+      <path d="M 54 24 Q 62 34 60 52" fill="none"/>
+      <circle cx="26" cy="36" r="3.2" fill="#2d2926" stroke="none"/>
+      <circle cx="42" cy="36" r="3.2" fill="#2d2926" stroke="none"/>
+      <ellipse cx="34" cy="46" rx="7" ry="5" fill="#f0ebe3" stroke="#2d2926" stroke-width="1.5"/>
+      <path d="M 30 50 Q 34 54 38 50" fill="none" stroke-width="1.5"/>
+      <path d="M 22 62 L 18 78 M 46 62 L 50 78" fill="none" stroke-width="2"/>
+    </g>
+
+    <!-- Center dog (standing, tallest) -->
+    <g transform="translate(158, 148)">
+      <ellipse cx="42" cy="118" rx="36" ry="26" fill="#ffffff"/>
+      <path d="M 20 88 Q 10 68 16 44 Q 22 18 42 14 Q 62 18 68 44 Q 74 68 64 88" fill="#ffffff"/>
+      <path d="M 16 44 Q 4 58 6 80" fill="none"/>
+      <path d="M 68 44 Q 80 58 78 80" fill="none"/>
+      <circle cx="32" cy="52" r="3.8" fill="#2d2926" stroke="none"/>
+      <circle cx="52" cy="52" r="3.8" fill="#2d2926" stroke="none"/>
+      <ellipse cx="42" cy="66" rx="9" ry="7" fill="#f0ebe3" stroke="#2d2926" stroke-width="1.5"/>
+      <path d="M 34 72 Q 42 80 50 72 Q 46 76 42 76 Q 38 76 34 72 Z" fill="#ce2b37" stroke="#2d2926" stroke-width="1.2"/>
+      <path d="M 24 96 L 18 132 M 60 96 L 66 132" fill="none"/>
+      <path d="M 30 118 Q 42 126 54 118" fill="none" stroke-width="1.8"/>
+    </g>
+
+    <!-- Right dog (standing, tail up) -->
+    <g transform="translate(248, 168)">
+      <ellipse cx="38" cy="98" rx="32" ry="24" fill="#ffffff"/>
+      <path d="M 18 72 Q 10 54 14 34 Q 18 16 36 14 Q 54 16 58 34 Q 62 54 54 72" fill="#ffffff"/>
+      <path d="M 14 34 Q 6 46 8 64" fill="none"/>
+      <path d="M 58 34 Q 66 46 64 64" fill="none"/>
+      <circle cx="28" cy="42" r="3.4" fill="#2d2926" stroke="none"/>
+      <circle cx="44" cy="42" r="3.4" fill="#2d2926" stroke="none"/>
+      <ellipse cx="36" cy="54" rx="7.5" ry="5.5" fill="#f0ebe3" stroke="#2d2926" stroke-width="1.5"/>
+      <path d="M 58 70 Q 78 48 82 24 Q 84 14 78 10 Q 72 8 70 18 Q 68 34 62 52" fill="#ffffff"/>
+      <path d="M 22 88 L 16 118 M 52 88 L 58 118" fill="none"/>
+    </g>
+  </g>
+
+  <!-- Arched typography -->
+  <text font-family="'Source Sans 3', 'Segoe UI', sans-serif" font-size="22" font-weight="700" letter-spacing="1.5" fill="#2d2926">
+    <textPath href="#textTopLeft" startOffset="8%">Spinone Italiano</textPath>
+  </text>
+  <text font-family="'Source Sans 3', 'Segoe UI', sans-serif" font-size="26" font-weight="800" letter-spacing="3" fill="#2d2926">
+    <textPath href="#textTopRight" startOffset="18%">RESCUE</textPath>
+  </text>
+
+  <!-- Inner accent ring -->
+  <circle cx="200" cy="200" r="188" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.55"/>
+  <circle cx="200" cy="200" r="188" fill="none" stroke="#2d2926" stroke-width="1.2" opacity="0.12"/>
+</svg>
